@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Yo Dali te saludo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<form action="greeting">
+    <input type="text" name="nombre">Ponga su nombre</input>
+    <input type="submit" >
+    <select name="planeta">
+        <option th:each="planeta : ${Planetas}" th:value="${planeta}" th:text="${planeta}"> </option>
+    </select>
+</form>
+
+</body>
+</html>
