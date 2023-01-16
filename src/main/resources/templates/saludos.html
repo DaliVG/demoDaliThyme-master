@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <title>Yo Dali te saludo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
-<p th:text="'hooooodaaaa, '+ ${nombre}+ '!'"/>
-<img th:src="'./imagenes/'+${planeta}" width="100" height="100"/>
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" th:src="'./imagenes/'+${planeta}"/>
+    <div class="card-body">
+        <p class="card-text"th:text="${#dates.format(new java.util.Date().getTime(), 'dd-MM-yyyy')}"/>
+        <a href="." class="btn btn-primary">¿Quieres cambiar de saludo o de planeta?</a>
+    </div>
+</div>
+    <p th:text="'hooooodaaaa, '+ ${nombre}+ '!'"/>
+
 </body>
+<script src="/js/bootstrap.bundle.min.js"></script>
 </html>
